@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prefwindow id="mtzoom-prefs"
+  title="Multi-touch Zoom Preferences"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  style="min-width: 420px;">
+
+  <prefpane id="mtzoom-pane" label="Settings" orient="vertical" style="padding: 14px;">
+    <description style="margin-bottom: 10px;">
+      These settings control Shift+Scroll zoom behavior.
+    </description>
+
+    <checkbox id="mtzoom_shiftkey"
+      label="Enable SHIFT+scroll zoom"
+      />
+
+    <separator/>
+
+    <checkbox id="mtzoom_disableScrollbarsWhenZooming"
+      label="Disable scrollbars when zooming (performance tweak)"
+      />
+
+    <separator/>
+
+    <hbox align="center" style="margin-top: 6px;">
+      <label value="Zoom speed:" style="margin-right: 10px;"/>
+      <scale id="mtzoom_speed" min="0" max="10" increment="1" flex="1"/>
+      <label id="mtzoom_speed_value" value="" style="margin-left: 10px; width: 36px; text-align: right;"/>
+    </hbox>
+
+    <separator/>
+
+    <hbox pack="end">
+      <button label="Close" oncommand="window.close();"/>
+    </hbox>
+
+    <script type="application/javascript" src="prefs.js"/>
+  </prefpane>
+</prefwindow>
